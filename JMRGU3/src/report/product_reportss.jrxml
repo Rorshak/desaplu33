@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="product_reportss" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="36c97e17-e052-4374-9d9c-f2f09fb5041d">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="products"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT public.products.id,
+	public.products.precio,
+	public.products.descripcion,
+	public.products.existencia,
+	public.products.proveedor
+FROM public.products]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+	</field>
+	<field name="precio" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="precio"/>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="descripcion"/>
+	</field>
+	<field name="existencia" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="existencia"/>
+	</field>
+	<field name="proveedor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="proveedor"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="234" y="50" width="100" height="30" uuid="e23e1adb-9853-48d6-9f1e-3876997afed3"/>
+				<text><![CDATA[Products]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="100" height="30" backcolor="#B476D6" uuid="d89a59d6-8281-4bb6-8aaf-06154321f5db">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aea0d2fa-1fc7-4246-9afa-35f48b65d6a7"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="100" y="0" width="100" height="30" backcolor="#B476D6" uuid="19a7310d-9174-44af-b5a2-4c81e23e73a1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7548e6bb-c809-4650-8588-c2d8c43f3899"/>
+				</reportElement>
+				<text><![CDATA[precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="200" y="0" width="100" height="30" backcolor="#B476D6" uuid="15a1174f-aa55-40e9-b531-d134632f1aa4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ef6304bc-4f84-48e2-8616-1738b8c59682"/>
+				</reportElement>
+				<text><![CDATA[descripcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="300" y="0" width="100" height="30" backcolor="#B476D6" uuid="c85e3755-0fdc-4400-8e25-10a9cab2497f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a751a0b-3703-41d9-8b97-6a24a744e2cd"/>
+				</reportElement>
+				<text><![CDATA[existencia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="400" y="0" width="100" height="30" backcolor="#B476D6" uuid="1e0a42f5-7a62-40c5-8182-96824a8207c5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7eff04eb-63ac-4e2e-b6ae-c46f83fd6e95"/>
+				</reportElement>
+				<text><![CDATA[proveedor]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="100" height="30" backcolor="#E8C2F2" uuid="54e0a8b0-6388-4731-8354-223b44126d14">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aea0d2fa-1fc7-4246-9afa-35f48b65d6a7"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="100" y="0" width="100" height="30" backcolor="#E8C2F2" uuid="61b9423c-60eb-4c50-8474-40380e735850">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7548e6bb-c809-4650-8588-c2d8c43f3899"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="200" y="0" width="100" height="30" backcolor="#E8C2F2" uuid="c72a3216-8d17-44dd-a9f6-4d370aa118c1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ef6304bc-4f84-48e2-8616-1738b8c59682"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="300" y="0" width="100" height="30" backcolor="#E8C2F2" uuid="04e71005-1655-4db6-8223-f26969f357fd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a751a0b-3703-41d9-8b97-6a24a744e2cd"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{existencia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="400" y="0" width="100" height="30" backcolor="#E8C2F2" uuid="4c1435a5-ca7c-4599-8827-110a0d883e22">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7eff04eb-63ac-4e2e-b6ae-c46f83fd6e95"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{proveedor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
